@@ -63,10 +63,12 @@
               <svg class="icon icon-search btn_search__svg">
                 <use xlink:href="static/img/svg/symbol/sprite.svg#search"></use>
               </svg>
-            </button><a class="link_wishList" href="#">
+            </button>
+            <button class="link_wishList" name="wishlist">
               <svg class="icon icon-wishlist link_wishList__svg">
                 <use xlink:href="static/img/svg/symbol/sprite.svg#wishlist"></use>
-              </svg></a>
+              </svg>
+            </button>
             <button class="btn_burger" name="burger">
               <svg class="icon icon-menu btn_burger__svg">
                 <use xlink:href="static/img/svg/symbol/sprite.svg#menu"></use>
@@ -218,7 +220,7 @@
                 <div class="product_about_img">
                   <div class="product_about_img--wrap"><img class="product_about_img--this" src="static/img/content/box-product.jpg"></div>
                   <div class="product_about__view--wrap">
-                    <button class="product_about__view global_text" name="view">view gallery</button>
+                    <button class="product_about__view global_text" name="view" data-izimodal-open="#product_modal">view gallery</button>
                   </div>
                 </div>
               </div>
@@ -417,6 +419,52 @@
             </div>
           </div>
         </div>
+        <div id="product_modal">
+          <div class="product_popup_global">
+            <div class="product_popup_wrap">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product_popup"><img class="product_popup__img" src="static/img/content/box-product.jpg" alt="product0"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product_popup"><img class="product_popup__img" src="static/img/content/box-product.jpg" alt="product1"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product_popup"><img class="product_popup__img" src="static/img/content/box-product.jpg" alt="product2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next-slide">
+                <svg class="icon icon-down ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#down"></use>
+                </svg>
+              </div>
+              <div class="swiper-button-prev-slide">
+                <svg class="icon icon-down ">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#down"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="popup_thumbs_wrap">
+              <div class="popup_thumbs">
+                <div class="popup_thumbs__item active_thumbs"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbsNaN"></div>
+                <div class="popup_thumbs__item"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbsNaN"></div>
+                <div class="popup_thumbs__item"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbsNaN"></div>
+              </div>
+              <button class="btn_360" name="360">
+                <svg class="icon icon-360 btn_360__svg">
+                  <use xlink:href="static/img/svg/symbol/sprite.svg#360"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="btn_cancel" name="cancel" data-izimodal-close="#product_modal">
+            <svg class="icon icon-cancel btn_cancel__svg">
+              <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+            </svg>
+          </button>
+        </div>
       </div>
       <footer>
         <div class="footer">
@@ -495,6 +543,42 @@
           </div>
         </div>
       </footer>
+      <div class="global_wishlist_wrap">
+        <div class="global_wishlist">
+          <button class="btn_cancel" name="cancel">
+            <svg class="icon icon-cancel btn_cancel__svg">
+              <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+            </svg>
+          </button>
+          <h3 class="global_wishlist__title">Wishlist</h3>
+          <ul class="wishlist_list">
+            <li class="wishlist_list__item">
+              <div class="wishlist_list_title">
+                <h6 class="wishlist_list_title--this">Black Box F-1 G50</h6>
+                <button class="btn_wishList" name="wishList">
+                  <svg class="icon icon-wishlist btn_wishList__svg">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#wishlist"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg"></div>
+            </li>
+            <li class="wishlist_list__item">
+              <div class="wishlist_list_title">
+                <h6 class="wishlist_list_title--this">Black Box F-1 G51</h6>
+                <button class="btn_wishList" name="wishList">
+                  <svg class="icon icon-wishlist btn_wishList__svg">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#wishlist"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="global_wishlist__footer"><a class="btn_global" href="#">Send to dealer</a><b class="global_midTitle">or</b><a class="btn_pdf" href="#">save as pdf</a></div>
+      </div>
+      <div class="global_wishlist__overlay"></div>
       <div class="menu_wrap">
         <ul class="menuGlobal">
           <li class="menuGlobal__item"><a class="menuGlobal__link" href="index.html">1. Index</a></li>

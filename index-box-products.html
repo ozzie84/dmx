@@ -63,10 +63,12 @@
               <svg class="icon icon-search btn_search__svg">
                 <use xlink:href="static/img/svg/symbol/sprite.svg#search"></use>
               </svg>
-            </button><a class="link_wishList" href="#">
+            </button>
+            <button class="link_wishList" name="wishlist">
               <svg class="icon icon-wishlist link_wishList__svg">
                 <use xlink:href="static/img/svg/symbol/sprite.svg#wishlist"></use>
-              </svg></a>
+              </svg>
+            </button>
             <button class="btn_burger" name="burger">
               <svg class="icon icon-menu btn_burger__svg">
                 <use xlink:href="static/img/svg/symbol/sprite.svg#menu"></use>
@@ -213,36 +215,39 @@
         </div>
         <div class="box_main_wrap">
           <div class="container">
-            <ul class="box_main">
-              <li class="box_main__item">
-                <div class="box_main_img"><img class="box_main_img--this" src="static/img/content/box-product.jpg"></div>
-                <div class="box_main_info">
-                  <h2 class="global_title">BlackBox Series</h2>
-                  <p class="global_text">The W-DMX™ BlackBox G5 is our most popular of the series, using our patented Adaptive Frequency Hopping technology to automatically avoid interference created by other wireless networks.</p><a class="global_text box_main__link" href="#">learn more</a>
+            <div class="swiper-container">
+              <div class="swiper-wrapper box_main">
+                <div class="swiper-slide box_main__item">
+                  <div class="box_main_img"><img class="box_main_img--this" src="static/img/content/box-product.jpg"></div>
+                  <div class="box_main_info">
+                    <h2 class="global_title">BlackBox Series</h2>
+                    <p class="global_text">The W-DMX™ BlackBox G5 is our most popular of the series, using our patented Adaptive Frequency Hopping technology to automatically avoid interference created by other wireless networks.</p><a class="global_text box_main__link" href="#">learn more</a>
+                  </div>
                 </div>
-              </li>
-              <li class="box_main__item">
-                <div class="box_main_img"><img class="box_main_img--this" src="static/img/content/box-product.jpg"></div>
-                <div class="box_main_info">
-                  <h2 class="global_title">WhiteBox Series</h2>
-                  <p class="global_text">The W-DMX™ WhiteBox Transceivers are the perfect weatherproofed solution for Wireless DMX transmission, as part of our architectural/outdoor range.</p><a class="global_text box_main__link" href="#">learn more</a>
+                <div class="swiper-slide box_main__item">
+                  <div class="box_main_img"><img class="box_main_img--this" src="static/img/content/box-product.jpg"></div>
+                  <div class="box_main_info">
+                    <h2 class="global_title">WhiteBox Series</h2>
+                    <p class="global_text">The W-DMX™ WhiteBox Transceivers are the perfect weatherproofed solution for Wireless DMX transmission, as part of our architectural/outdoor range.</p><a class="global_text box_main__link" href="#">learn more</a>
+                  </div>
                 </div>
-              </li>
-              <li class="box_main__item">
-                <div class="box_main_img"><img class="box_main_img--this" src="static/img/content/box-product.jpg"></div>
-                <div class="box_main_info">
-                  <h2 class="global_title">ProBox Series</h2>
-                  <p class="global_text">The W-DMX™ ProBox F-2500 is our top of the line, 2 universe transmitter/receiver and 1 universe Repeater, all in a single box 19” rack unit, with built in support of Ethernet lighting protocols, including Art-Net and Streaming ACN.</p><a class="global_text box_main__link" href="#">learn more</a>
+                <div class="swiper-slide box_main__item">
+                  <div class="box_main_img"><img class="box_main_img--this" src="static/img/content/box-product.jpg"></div>
+                  <div class="box_main_info">
+                    <h2 class="global_title">ProBox Series</h2>
+                    <p class="global_text">The W-DMX™ ProBox F-2500 is our top of the line, 2 universe transmitter/receiver and 1 universe Repeater, all in a single box 19” rack unit, with built in support of Ethernet lighting protocols, including Art-Net and Streaming ACN.</p><a class="global_text box_main__link" href="#">learn more</a>
+                  </div>
                 </div>
-              </li>
-              <li class="box_main__item">
-                <div class="box_main_img"><img class="box_main_img--this" src="static/img/content/box-product.jpg"></div>
-                <div class="box_main_info">
-                  <h2 class="global_title">Micro Series</h2>
-                  <p class="global_text">The Micro series are the most compact, battery-powered, W-DMX™ transceivers and receivers available on the market today, with all the features of the popular BlackBox, excluding Triple Band Technology.</p><a class="global_text box_main__link" href="#">learn more</a>
+                <div class="swiper-slide box_main__item">
+                  <div class="box_main_img"><img class="box_main_img--this" src="static/img/content/box-product.jpg"></div>
+                  <div class="box_main_info">
+                    <h2 class="global_title">Micro Series</h2>
+                    <p class="global_text">The Micro series are the most compact, battery-powered, W-DMX™ transceivers and receivers available on the market today, with all the features of the popular BlackBox, excluding Triple Band Technology.</p><a class="global_text box_main__link" href="#">learn more</a>
+                  </div>
                 </div>
-              </li>
-            </ul>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
         </div>
         <div class="product_items_wrap global_padding">
@@ -255,6 +260,33 @@
                   <button class="btn_tag" name="tag">WhiteBox Series</button>
                   <button class="btn_tag" name="tag">ProBox Series</button>
                   <button class="btn_tag" name="tag">Micro Series</button>
+                </div>
+                <div class="compare_select_wrap tag_box_mobile">
+                  <button class="compare_select__btn global_midTitle" name="select">All products
+                    <svg class="icon icon-down compare_select__svg">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#down"></use>
+                    </svg>
+                  </button>
+                  <ul class="compare_select">
+                    <li class="compare_select__item">
+                      <button class="compare_select__link" name="product">Some Categories 1</button>
+                    </li>
+                    <li class="compare_select__item">
+                      <button class="compare_select__link" name="product">Some Categories 2</button>
+                    </li>
+                    <li class="compare_select__item">
+                      <button class="compare_select__link" name="product">Some Categories 3</button>
+                    </li>
+                    <li class="compare_select__item">
+                      <button class="compare_select__link" name="product">Some Categories 4</button>
+                    </li>
+                    <li class="compare_select__item">
+                      <button class="compare_select__link" name="product">Some Categories 5</button>
+                    </li>
+                    <li class="compare_select__item">
+                      <button class="compare_select__link" name="product">Some Categories 6</button>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -486,6 +518,42 @@
           </div>
         </div>
       </footer>
+      <div class="global_wishlist_wrap">
+        <div class="global_wishlist">
+          <button class="btn_cancel" name="cancel">
+            <svg class="icon icon-cancel btn_cancel__svg">
+              <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+            </svg>
+          </button>
+          <h3 class="global_wishlist__title">Wishlist</h3>
+          <ul class="wishlist_list">
+            <li class="wishlist_list__item">
+              <div class="wishlist_list_title">
+                <h6 class="wishlist_list_title--this">Black Box F-1 G50</h6>
+                <button class="btn_wishList" name="wishList">
+                  <svg class="icon icon-wishlist btn_wishList__svg">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#wishlist"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg"></div>
+            </li>
+            <li class="wishlist_list__item">
+              <div class="wishlist_list_title">
+                <h6 class="wishlist_list_title--this">Black Box F-1 G51</h6>
+                <button class="btn_wishList" name="wishList">
+                  <svg class="icon icon-wishlist btn_wishList__svg">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#wishlist"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="global_wishlist__footer"><a class="btn_global" href="#">Send to dealer</a><b class="global_midTitle">or</b><a class="btn_pdf" href="#">save as pdf</a></div>
+      </div>
+      <div class="global_wishlist__overlay"></div>
       <div class="menu_wrap">
         <ul class="menuGlobal">
           <li class="menuGlobal__item"><a class="menuGlobal__link" href="index.html">1. Index</a></li>
