@@ -7,6 +7,12 @@
     $('.btn_global, .btn_add, .btn_pdf').tilt({
       scale: 1.05
     });
+    $(".index-product-page #product_modal").iziModal({
+      bodyOverflow: true,
+      onOpened: function onOpened() {
+        sliderStart();
+      }
+    });
   }); // Nav pages global
 
   $('.menu_click').on('click', function () {
@@ -321,14 +327,8 @@
     controlActive2.on('click', '.history_control__point', function () {
       swiperHistory2.slideTo($(this).index() + 1, 500);
     });
-  }
+  } // Menu fixed
 
-  $("#product_modal").iziModal({
-    bodyOverflow: true,
-    onOpened: function onOpened() {
-      sliderStart();
-    }
-  }); // Menu fixed
 
   function menuFixed() {
     if ($(window).scrollTop() > 110) {
