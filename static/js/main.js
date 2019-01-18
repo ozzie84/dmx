@@ -6,13 +6,19 @@
 
     $('.btn_global, .btn_add, .btn_pdf').tilt({
       scale: 1.05
-    });
-    $(".index-product-page #product_modal").iziModal({
-      bodyOverflow: true,
-      onOpened: function onOpened() {
-        sliderStart();
-      }
-    });
+    }); // Modal
+
+    if ($('body').hasClass('index-product-page')) {
+      $(".index-product-page #product_modal").iziModal({
+        bodyOverflow: true,
+        onOpened: function onOpened() {
+          sliderStart();
+        }
+      });
+    } // Search init
+
+
+    jsonInit();
   }); // Nav pages global
 
   $('.menu_click').on('click', function () {
@@ -289,7 +295,26 @@
         duration: 800
       });
     }
+  }); // Swiper maps
+
+  var controlActiveMap = $('.distributors_control');
+  var swiperMap = new Swiper('.distributors .swiper-container', {
+    speed: 1200,
+    spaceBetween: 0,
+    loop: false,
+    // effect: 'fade',
+    simulateTouch: false
   });
+  swiperMap.on('slideChange', function () {
+    var index = swiperMap.activeIndex;
+    controlActiveMap.find('.active_map').removeClass('active_map');
+    controlActiveMap.children().eq(index).addClass('active_map');
+  });
+  controlActiveMap.on('click', '.distributors_control__btn', function (e) {
+    e.preventDefault();
+    swiperMap.slideTo($(this).index(), 1000);
+  }); // Swiper box
+
   var boxSwiper = new Swiper('.box_main_wrap .swiper-container', {
     speed: 1000,
     spaceBetween: 30,
@@ -338,5 +363,28 @@
     }
   }
 
-  $(window).bind('scroll', menuFixed);
+  $(window).bind('scroll', menuFixed); // Search
+
+  function jsonInit() {
+    var searchField = $('#search').val();
+    var expression = new RegExp(searchField, 'i');
+    $.getJSON('static/json/stores.json', function (data) {
+      $.each(data, function (key, value) {
+        if (value.attributes == $('input[name="store"]:checked').val() || !$('input[name="store"]:checked').val()) {
+          if (value.title.search(expression) !== -1 || value.location.search(expression) !== -1) {
+            $('#result').append("\n\t\t\t\t\t\t\t\t<li class=\"distributors_list__item ".concat(value.attributes, "\">\n\t\t\t\t\t\t\t\t\t<div class=\"distributors_list_img\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"static/img/content/").concat(value.img, "\" alt=\"img\" class=\"distributors_list_img--this\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"distributors_list_content\">\n\t\t\t\t\t\t\t\t\t\t<h6 class=\"distributors_list__title\">").concat(value.title, "</h6>\n\t\t\t\t\t\t\t\t\t\t<p class=\"distributors_list__address\">").concat(value.location, "</p>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"distributors_list_btn\">\n\t\t\t\t\t\t\t\t\t\t<button name=\"see\" class=\"btn_see\">\n\t\t\t\t\t\t\t\t\t\t\t<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" viewBox=\"0 0 511.999 511.999\" xml:space=\"preserve\">\n\t\t\t\t\t\t\t\t\t\t\t\t<g>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<g>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M508.745,246.041c-4.574-6.257-113.557-153.206-252.748-153.206S7.818,239.784,3.249,246.035\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tc-4.332,5.936-4.332,13.987,0,19.923c4.569,6.257,113.557,153.206,252.748,153.206s248.174-146.95,252.748-153.201\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tC513.083,260.028,513.083,251.971,508.745,246.041z M255.997,385.406c-102.529,0-191.33-97.533-217.617-129.418\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tc26.253-31.913,114.868-129.395,217.617-129.395c102.524,0,191.319,97.516,217.617,129.418\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tC447.361,287.923,358.746,385.406,255.997,385.406z\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t\t\t<g>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<g>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M255.997,154.725c-55.842,0-101.275,45.433-101.275,101.275s45.433,101.275,101.275,101.275\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ts101.275-45.433,101.275-101.275S311.839,154.725,255.997,154.725z M255.997,323.516c-37.23,0-67.516-30.287-67.516-67.516\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ts30.287-67.516,67.516-67.516s67.516,30.287,67.516,67.516S293.227,323.516,255.997,323.516z\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t"));
+          }
+        }
+      });
+    });
+  }
+
+  $('input[name="store"]').change(function () {
+    $('#result').html('');
+    jsonInit();
+  });
+  $('#search').keyup(function () {
+    $('#result').html('');
+    jsonInit();
+  });
 })(jQuery);

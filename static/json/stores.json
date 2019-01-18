@@ -1,0 +1,74 @@
+[
+  {
+    "img": "magaz.jpg",
+    "title": "Local",
+    "location": "510 Annie Trail Apt. 761",
+    "attributes": "on"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "Demo",
+    "location": "511 Annie Trail Apt. 761",
+    "attributes": "on"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "Test",
+    "location": "512 Annie Trail Apt. 761",
+    "attributes": "on"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "Freevox",
+    "location": "510 Annie Trail Apt. 761",
+    "attributes": "on"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "BadStore",
+    "location": "Ukraine, Lviv",
+    "attributes": "on"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "BadStore",
+    "location": "Ukraine, Kherson",
+    "attributes": "off"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "BadStore",
+    "location": "Ukraine, Odessa",
+    "attributes": "off"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "BadStore",
+    "location": "Ukraine, Odessa",
+    "attributes": "off"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "BadStore",
+    "location": "Ukraine, Odessa",
+    "attributes": "off"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "BadStore",
+    "location": "Ukraine, Odessa",
+    "attributes": "off"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "BadStore",
+    "location": "Ukraine, Odessa",
+    "attributes": "off"
+  },
+  {
+    "img": "magaz.jpg",
+    "title": "BadStore",
+    "location": "Ukraine, Odessa",
+    "attributes": "off"
+  }
+]
