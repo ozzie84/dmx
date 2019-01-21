@@ -421,6 +421,11 @@
                   <div class="swiper-slide">
                     <div class="product_popup"><img class="product_popup__img" src="static/img/content/box-product.jpg" alt="product2"></div>
                   </div>
+                  <div class="swiper-slide">
+                    <div class="product_popup">
+                      <div id="spin-sprite" data-end="3" data-source="static/img/general" data-pic_name="index-card"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="swiper-button-next-slide">
@@ -436,15 +441,17 @@
             </div>
             <div class="popup_thumbs_wrap">
               <div class="popup_thumbs">
-                <div class="popup_thumbs__item active_thumbs"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbsNaN"></div>
-                <div class="popup_thumbs__item"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbsNaN"></div>
-                <div class="popup_thumbs__item"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbsNaN"></div>
+                <div class="popup_thumbs__item active_thumbs"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbs"></div>
+                <div class="popup_thumbs__item"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbs"></div>
+                <div class="popup_thumbs__item"><img class="popup_thumbs__this" src="static/img/content/box-product.jpg" alt="thumbs"></div>
+                <div class="popup_thumbs__item">
+                  <button class="btn_360" name="360">
+                    <svg class="icon icon-360 btn_360__svg">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#360"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <button class="btn_360" name="360">
-                <svg class="icon icon-360 btn_360__svg">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#360"></use>
-                </svg>
-              </button>
             </div>
           </div>
           <button class="btn_cancel" name="cancel" data-izimodal-close="#product_modal">

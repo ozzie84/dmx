@@ -19,6 +19,23 @@
 
 
     jsonInit();
+  });
+  $(document).on('click', '.video .banners_lg, .video .banners_sm__item', function () {
+    var way = $(this).attr('data-video');
+    var title = $(this).children().find('.banners__place').text();
+    $("#modal-iframe").iziModal({
+      headerColor: '#fec10e',
+      title: title,
+      iframe: true,
+      iframeURL: way,
+      fullscreen: true,
+      closeOnEscape: true,
+      closeButton: true,
+      overlayColor: 'rgba(0, 0, 0, 0.9)',
+      onClosed: function onClosed() {
+        $('#modal-iframe').iziModal('destroy');
+      }
+    });
   }); // Nav pages global
 
   $('.menu_click').on('click', function () {
@@ -352,6 +369,18 @@
     });
     controlActive2.on('click', '.history_control__point', function () {
       swiperHistory2.slideTo($(this).index() + 1, 500);
+    }); // Sprite Spinner
+
+    var spin = $('#spin-sprite');
+    var source = spin.attr('data-source');
+    var names = spin.attr('data-pic_name');
+    names += '{frame}.jpg';
+    var count = spin.attr('data-end');
+    spin.spritespin({
+      source: SpriteSpin.sourceArray(source + '/' + names, {
+        frame: [1, count],
+        digits: 1
+      })
     });
   } // Menu fixed
 
