@@ -2,11 +2,7 @@
 
 (function ($) {
   $(document).ready(function () {
-    svg4everybody({}); // Tilt JS
-
-    $('.btn_global, .btn_add, .btn_pdf').tilt({
-      scale: 1.05
-    }); // Modal
+    svg4everybody({}); // Modal
 
     if ($('body').hasClass('index-product-page')) {
       $(".index-product-page #product_modal").iziModal({
@@ -312,7 +308,32 @@
         easing: 'easeInOutQuad',
         duration: 800
       });
+      anime({
+        targets: '.history_control_wrap',
+        right: function right() {
+          return $('.point' + index).attr('data-scroll');
+        },
+        easing: 'easeInOutQuad',
+        duration: 800
+      });
     }
+  });
+  controlActive.on('click', '.history_control__point', function () {
+    var _this = this;
+
+    var _loop = function _loop(j) {
+      if ($(_this).index() > j) {
+        setTimeout(function () {
+          controlActive.children().eq(j).css('background', '#fec10e');
+        }, 200);
+      }
+    };
+
+    for (var j = 0; j < $(this).index(); j++) {
+      _loop(j);
+    }
+
+    swiperHistory.slideTo($(this).index(), 1200);
   }); // Swiper maps
 
   var controlActiveMap = $('.distributors_control');
@@ -339,7 +360,7 @@
     loop: false,
     slidesPerColumn: 4,
     breakpoints: {
-      576: {
+      767: {
         loop: true,
         slidesPerColumn: 1,
         pagination: {
