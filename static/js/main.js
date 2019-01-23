@@ -11,8 +11,67 @@
           sliderStart();
         }
       });
-    } // Search init
+    } // Tooltip
 
+
+    var tooltipTrigger = '.tooltip-trigger';
+    var inputTooltipTrigger = 'input' + tooltipTrigger;
+    var buttonTooltipTrigger = 'button' + tooltipTrigger; // Closes all tooltips on ESC when tooltip is triggered via focus,
+
+    $(tooltipTrigger).keydown(function (event) {
+      var instances = $.tooltipster.instances();
+
+      if (event.which === 27) {
+        // TODO: Figure out how to use randomly generated ID for tooltip, to close the selected tooltip instead of all of them.
+        $.each(instances, function (i, instance) {
+          instance.close();
+        });
+      }
+    }); // Initialization options for when inputs are tooltip triggers
+
+    $(inputTooltipTrigger).tooltipster({
+      trigger: 'custom'
+    }); // Show tooltip on focus of tooltip trigger
+
+    $(tooltipTrigger).focusin(function () {
+      $(this).tooltipster('show');
+    }); // Hide tooltip when focusing out of tooltip trigger
+
+    $(tooltipTrigger).focusout(function () {
+      $(this).tooltipster('hide');
+    }); // Show tooltip on hover when tooltip trigger is input
+
+    $(inputTooltipTrigger).hover(function () {
+      $(this).tooltipster('show');
+    }); // Prevents tooltip from closing on mouseleave when input is focused
+
+    $(inputTooltipTrigger).mouseleave(function () {
+      if (!$(this).is(":focus")) {
+        $(this).tooltipster('hide');
+      }
+    }); // Initialization options for when buttons are tooltip triggers
+
+    $(buttonTooltipTrigger).tooltipster({
+      trigger: 'custom',
+      theme: 'tooltipster-shadow',
+      triggerOpen: {
+        mouseenter: true,
+        touchstart: true,
+        click: false
+      },
+      triggerClose: {
+        click: true,
+        scroll: true,
+        tap: true,
+        mouseleave: false
+      }
+    }); // Fixing bug that causes focus on input fields not work properly
+
+    $(inputTooltipTrigger).on({
+      'touchstart': function touchstart() {
+        $(this).focus();
+      }
+    }); // Search init
 
     jsonInit();
   });
