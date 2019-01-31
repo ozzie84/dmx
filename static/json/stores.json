@@ -2,73 +2,23 @@
   {
     "img": "magaz.jpg",
     "title": "Local",
-    "location": "510 Annie Trail Apt. 761",
-    "attributes": "on"
+    "country": "Ukraine",
+    "location": "510 Pilotskaya street. 54",
+    "email": "houdiho@live.com",
+    "attributes": "on",
+    "x": "61%",
+    "y": "51%",
+    "unique": "unique1"
   },
   {
     "img": "magaz.jpg",
     "title": "Demo",
+    "country": "Poland",
     "location": "511 Annie Trail Apt. 761",
-    "attributes": "on"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "Test",
-    "location": "512 Annie Trail Apt. 761",
-    "attributes": "on"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "Freevox",
-    "location": "510 Annie Trail Apt. 761",
-    "attributes": "on"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "BadStore",
-    "location": "Ukraine, Lviv",
-    "attributes": "on"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "BadStore",
-    "location": "Ukraine, Kherson",
-    "attributes": "off"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "BadStore",
-    "location": "Ukraine, Odessa",
-    "attributes": "off"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "BadStore",
-    "location": "Ukraine, Odessa",
-    "attributes": "off"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "BadStore",
-    "location": "Ukraine, Odessa",
-    "attributes": "off"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "BadStore",
-    "location": "Ukraine, Odessa",
-    "attributes": "off"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "BadStore",
-    "location": "Ukraine, Odessa",
-    "attributes": "off"
-  },
-  {
-    "img": "magaz.jpg",
-    "title": "BadStore",
-    "location": "Ukraine, Odessa",
-    "attributes": "off"
+    "email": "test@gmail.com",
+    "attributes": "off",
+    "x": "80%",
+    "y": "70%",
+    "unique": "unique2"
   }
 ]
