@@ -427,6 +427,7 @@
           </div>
         </div>
       </footer>
+      <!-- TODO whishlist start-->
       <div class="global_wishlist_wrap">
         <div class="global_wishlist">
           <button class="btn_cancel" name="cancel">
@@ -435,34 +436,100 @@
             </svg>
           </button>
           <h3 class="global_wishlist__title">Wishlist</h3>
-          <ul class="wishlist_list">
-            <li class="wishlist_list__item">
-              <div class="wishlist_list_title">
-                <h6 class="wishlist_list_title--this">Black Box F-1 G50</h6>
-                <button class="btn_wishList" name="wishList">
-                  <svg class="icon icon-wishlist btn_wishList__svg">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#wishlist"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg" alt="img"></div>
-            </li>
-            <li class="wishlist_list__item">
-              <div class="wishlist_list_title">
-                <h6 class="wishlist_list_title--this">Black Box F-1 G51</h6>
-                <button class="btn_wishList" name="wishList">
-                  <svg class="icon icon-wishlist btn_wishList__svg">
-                    <use xlink:href="static/img/svg/symbol/sprite.svg#wishlist"></use>
-                  </svg>
-                </button>
-              </div>
-              <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg" alt="img"></div>
-            </li>
-          </ul>
+          <div class="wishlist_list__scroll">
+            <ul class="wishlist_list">
+              <li class="wishlist_list__item">
+                <div class="wishlist_list_title">
+                  <h6 class="wishlist_list_title--this">Black Box F-1 G50</h6>
+                  <button class="btn_close" name="close">
+                    <svg class="icon icon-cancel btn_close__svg">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg" alt="img"></div>
+              </li>
+              <li class="wishlist_list__item">
+                <div class="wishlist_list_title">
+                  <h6 class="wishlist_list_title--this">Black Box F-1 G51</h6>
+                  <button class="btn_close" name="close">
+                    <svg class="icon icon-cancel btn_close__svg">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg" alt="img"></div>
+              </li>
+              <li class="wishlist_list__item">
+                <div class="wishlist_list_title">
+                  <h6 class="wishlist_list_title--this">Black Box F-1 G52</h6>
+                  <button class="btn_close" name="close">
+                    <svg class="icon icon-cancel btn_close__svg">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg" alt="img"></div>
+              </li>
+              <li class="wishlist_list__item">
+                <div class="wishlist_list_title">
+                  <h6 class="wishlist_list_title--this">Black Box F-1 G53</h6>
+                  <button class="btn_close" name="close">
+                    <svg class="icon icon-cancel btn_close__svg">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg" alt="img"></div>
+              </li>
+              <li class="wishlist_list__item">
+                <div class="wishlist_list_title">
+                  <h6 class="wishlist_list_title--this">Black Box F-1 G54</h6>
+                  <button class="btn_close" name="close">
+                    <svg class="icon icon-cancel btn_close__svg">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg" alt="img"></div>
+              </li>
+              <li class="wishlist_list__item">
+                <div class="wishlist_list_title">
+                  <h6 class="wishlist_list_title--this">Black Box F-1 G55</h6>
+                  <button class="btn_close" name="close">
+                    <svg class="icon icon-cancel btn_close__svg">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#cancel"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="wishlist_list_img"><img class="wishlist_list_img--this" src="static/img/content/product_item1.jpg" alt="img"></div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="global_wishlist__footer"><a class="btn_global" href="#">Send to dealer</a><b class="global_midTitle">or</b><a class="btn_pdf" href="#">save as pdf</a></div>
+        <div class="global_wishlist__form--scroll">
+          <form class="global_wishlist__form">
+            <h5 class="global_wishlist__form--title">Get consultation</h5>
+            <input class="rma_form__input" type="email" name="email" placeholder="Your Email">
+            <div class="select_wrapper">
+              <svg class="icon icon-down select__svg">
+                <use xlink:href="static/img/svg/symbol/sprite.svg#down"></use>
+              </svg>
+              <select class="select">
+                <option selected hidden>Choose country</option>
+                <option>select2</option>
+                <option>select3</option>
+              </select>
+            </div>
+            <textarea class="contacts_form__area" placeholder="Write your message"></textarea>
+            <div class="global_wishlist__footer"><a class="btn_global" href="#">Get consultation</a><a class="btn_pdf" href="#">save as pdf</a><b class="global_midTitle">or</b>
+              <p class="text_18">You can check our<a href="#">Distributors</a>list or feel free to<a href="#">contact</a>with us.</p>
+            </div>
+          </form>
+        </div>
       </div>
       <div class="global_wishlist__overlay"></div>
+      <!-- TODO whishlist end-->
       <div class="menu_wrap">
         <ul class="menuGlobal">
           <li class="menuGlobal__item"><a class="menuGlobal__link" href="index.html">1. Index</a></li>
